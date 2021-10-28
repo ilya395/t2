@@ -229,12 +229,13 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(ttf|woff|woff2|eot)$/,
+                test: /\.(ttf|woff|woff2|eot|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
                             name: '[path][name].[ext]',
+                            outputPath: 'fonts/'
                         }
                     }
                 ]
