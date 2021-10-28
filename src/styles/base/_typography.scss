@@ -1,0 +1,104 @@
+@import "../variables/variables";
+
+@font-face {
+  font-family: "Tele2 DisplaySerif";
+  src: url("../../fonts/tele2_displayserif-regular.eot");
+  src: url("../../fonts/tele2_displayserif-regular.eot") format("opentype"),
+    url("../../fonts/tele2_displayserif-regular.woff") format('woff'),
+    url("../../fonts/tele2_displayserif-regular.ttf") format('truetype'),
+    url("../../fonts/tele2_displayserif-regular.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tele2 DisplaySerif";
+  src: url("../../fonts/tele2_displayserif-bold.eot");
+  src: url("../../fonts/tele2_displayserif-bold.eot") format("opentype"),
+    url("../../fonts/tele2_displayserif-bold.woff") format('woff'),
+    url("../../fonts/tele2_displayserif-bold.ttf") format('truetype'),
+    url("../../fonts/tele2_displayserif-bold.svg") format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tele2 TextSans";
+  src: url("../../fonts/tele2_textsans-regular.eot");
+  src: url("../../fonts/tele2_textsans-regular.eot") format("opentype"),
+    url("../../fonts/tele2_textsans-regular.woff") format('woff'),
+    url("../../fonts/tele2_textsans-regular.ttf") format('truetype'),
+    url("../../fonts/tele2_textsans-regular.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tele2 TextSans";
+  src: url("../../fonts/tele2_textsans-bold.eot");
+  src: url("../../fonts/tele2_textsans-bold.eot") format("opentype"),
+    url("../../fonts/tele2_textsans-bold.woff") format('woff'),
+    url("../../fonts/tele2_textsans-bold.ttf") format('truetype'),
+    url("../../fonts/tele2_textsans-bold.svg") format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  @extend .simple-text;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+.simple-title {
+  font-family: "Tele2 DisplaySerif";
+  letter-spacing: 0.01rem;
+  font-weight: normal;
+}
+h1 {
+  @extend .simple-title;
+  font-size: 2.6rem;
+  line-height: 3.6rem;
+  font-weight: bold;
+}
+h2 {
+  @extend .simple-title;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+h3 {
+  @extend .simple-title;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.02rem;
+}
+.simple-text {
+  font-family: "Tele2 TextSans";
+  letter-spacing: 0.02rem;
+  font-weight: normal;
+}
+.large-text {
+  @extend .simple-text;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  &_bold {
+    font-weight: bold;
+  }
+
+}
+.more-large-text {
+  @extend .simple-text;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+.main-text {
+  @extend .simple-text;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.small-text {
+  @extend .simple-text;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  &_bold {
+    font-weight: bold;
+  }
+}
