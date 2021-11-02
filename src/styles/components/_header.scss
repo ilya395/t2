@@ -1,7 +1,7 @@
 @import "../variables/variables";
 
 .header {
-  width: 100vw;
+  width: 100%; // 100vw;
   display: flex;
   justify-content: flex-start;
   align-items: center;

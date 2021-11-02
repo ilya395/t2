@@ -1,0 +1,74 @@
+@import "../variables/variables";
+
+.main {
+  padding-left: $desctop_padding_header;
+  padding-right: $desctop_padding_header;
+  padding-bottom: 1rem;
+  padding-top: 0.9rem;
+  margin-left: -0.9rem;
+  margin-right: -0.9rem;
+  flex-grow: 1;
+  display: grid;
+  background-color: $white_color;
+
+  .d1 {
+    grid-area: d1;
+  }
+  .d2 {
+    grid-area: d2;
+  }
+  .d3 {
+    grid-area: d3;
+  }
+  .d4 {
+    grid-area: d4;
+  }
+
+  &.home-region {
+    & .diagram {
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    &.rows {
+      grid-template-areas:
+      "d1"
+      "d3"
+      "d2"
+      "d4";
+
+      grid-auto-rows: 40.2rem;
+
+      & section {
+
+        & .diagram-container {
+          padding-bottom: 1.8rem;
+        }
+
+        &:last-child {
+          & .diagram-container {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &.active {
+        & .diagram {
+          opacity: 1;
+        }
+      }
+    }
+    &.blocks {
+      min-height: 65rem;
+      grid-template-areas:
+      "d1 d2"
+      "d3 d4";
+
+      &.active {
+        & .diagram {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

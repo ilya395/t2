@@ -1,0 +1,15 @@
+mixin diagramContainer(arg)
+  .diagram-container
+    .diagram-container__layer
+      .diagram-container__title
+        h2= arg.title || "-"
+      .diagram-container__content= arg.content
+main.main.home-region.blocks.active
+  section.diagram.d1
+    +diagramContainer({title: "Динамика вылета/прилета аэропорта", content: "Динамика вылета/прилета аэропорта"})
+  section.diagram.d2
+    +diagramContainer({title: "Домашний регион вылетающих/прилетающих", content: "Домашний регион вылетающих/прилетающих"})
+  section.diagram.d3
+    +diagramContainer({title: "Динамика вылетающих/прилетающих", content: "Динамика вылетающих/прилетающих"})
+  section.diagram.d4
+    +diagramContainer({title: "Домашний регион аэропорта", content: "Домашний регион аэропорта"})

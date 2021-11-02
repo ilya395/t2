@@ -1,0 +1,56 @@
+@import "../variables/variables";
+
+.filter-container {
+  position: absolute;
+  top: calc(100% + 0rem);
+  right: 0;
+  bottom: auto;
+  left: 0;
+  // width: 100vw;
+  padding-left: $desctop_padding_header;
+  padding-right: $desctop_padding_header;
+  // margin-left: -$desctop_padding_header;
+  // margin-right: -$desctop_padding_header;
+  padding-top: 0.9rem + 0rem;
+  padding-bottom: 1.2rem + 0rem;
+  border-top: 0.2rem solid $white_color;
+
+  // opacity: .5;
+  z-index: -11;
+  transform-origin: 50% 0%;
+  transform: scaleY(0); // matrix(1, 0, 1, 0, 0, 0); // ; // translateY(-50rem);
+  transition: all ease-in-out .6s;
+
+  &.active {
+    // animation: open_filter .6s both ease-in-out;
+    opacity: 1;
+    z-index: 11;
+    transform: scaleY(1); // matrix(1, -1, 1, 1, 0, 0); //  // translateY(0rem);
+  }
+}
+
+// @keyframes open_filter {
+//   0% {
+//     opacity: 0;
+//     z-index: -11;
+//     transform: translateY(-20rem);
+//   }
+//   100% {
+//     opacity: 1;
+//     z-index: 11;
+//     transform: translateY(0rem);
+//   }
+// }
+
+// @keyframes close_filter {
+//   0% {
+//     opacity: 1;
+//     z-index: 11;
+//     transform: translateY(0rem);
+//   }
+//   100% {
+//     opacity: 0;
+//     z-index: -11;
+//     transform: translateY(-20rem);
+//   }
+// }

@@ -1,7 +1,7 @@
 @import "../variables/variables";
 
 // @font-face {
-//   font-family: "Tele2 DisplaySerif";
+//   font-family: "tele2_displayserif-regular";
 //   src: url("/fonts/tele2_displayserif-regular.eot");
 //   src: url("/fonts/tele2_displayserif-regular.eot?#iefix") format('embedded-opentype'),
 //     url("/fonts/tele2_displayserif-regular.woff") format('woff'),
@@ -11,7 +11,7 @@
 //   font-style: normal;
 // }
 // @font-face {
-//   font-family: "Tele2 DisplaySerif";
+//   font-family: "tele2_displayserif-bold";
 //   src: url("/fonts/tele2_displayserif-bold.eot");
 //   src: url("/fonts/tele2_displayserif-bold.eot?#iefix") format('embedded-opentype'),
 //     url("/fonts/tele2_displayserif-bold.woff") format('woff'),
@@ -21,7 +21,7 @@
 //   font-style: normal;
 // }
 // @font-face {
-//   font-family: "Tele2 TextSans";
+//   font-family: "tele2_textsans-regular";
 //   src: url("/fonts/tele2_textsans-regular.eot");
 //   src: url("/fonts/tele2_textsans-regular.eot?#iefix") format('embedded-opentype'),
 //     url("/fonts/tele2_textsans-regular.woff") format('woff'),
@@ -31,7 +31,7 @@
 //   font-style: normal;
 // }
 // @font-face {
-//   font-family: "Tele2 TextSans";
+//   font-family: "tele2_textsans-bold";
 //   src: url("/fonts/tele2_textsans-bold.eot");
 //   src: url("/fonts/tele2_textsans-bold.eot?#iefix") format('embedded-opentype'),
 //     url("/fonts/tele2_textsans-bold.woff") format('woff'),
@@ -49,7 +49,7 @@ body {
   font-size: 1.6rem;
 }
 .simple-title {
-  font-family: "Tele2 DisplaySerif";
+  font-family: "tele2_displayserif-bold";
   letter-spacing: 0.01rem;
   font-weight: normal;
 }
@@ -71,7 +71,7 @@ h3 {
   letter-spacing: 0.02rem;
 }
 .simple-text {
-  font-family: "Tele2 TextSans";
+  font-family: "tele2_textsans-regular", sans-serif;
   letter-spacing: 0.02rem;
   font-weight: normal;
 }
@@ -105,6 +105,10 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .text {
