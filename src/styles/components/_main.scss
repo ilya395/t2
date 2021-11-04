@@ -1,8 +1,11 @@
 @import "../variables/variables";
 
 .main {
-  padding-left: $desctop_padding_header;
-  padding-right: $desctop_padding_header;
+  &-wrapper {
+    padding-left: $desctop_padding_header;
+    padding-right: $desctop_padding_header;
+  }
+
   padding-bottom: 1rem;
   padding-top: 0.9rem;
   margin-left: -0.9rem;

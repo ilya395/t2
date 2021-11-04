@@ -6,5 +6,7 @@ html
   body.body
     .work-area
       include ../particles/header.pug
-      include ../particles/aside.pug
-      include ./part/main.pug
+      include ../particles/mixins/aside.mixin.pug
+      +asideHandler({classColor: "ping", title: "Домашний регион", filterName: "home-region"})
+      .main-wrapper
+        include ./part/main.pug

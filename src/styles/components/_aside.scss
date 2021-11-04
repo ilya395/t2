@@ -1,11 +1,13 @@
 @import "../variables/variables";
 
 .aside {
-  padding-top: 1.4rem;
-  padding-bottom: 1.4rem;
+
   &__layer {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
     padding-left: $desctop_padding_header;
     padding-right: $desctop_padding_header;
+    z-index: 12;
   }
 
   &.ping {
@@ -15,6 +17,9 @@
       color: $ping_color;
     }
     & .filter-container {
+      background-color: $ping_color;
+    }
+    & .aside__layer {
       background-color: $ping_color;
     }
   }
@@ -149,8 +154,9 @@
     }
   }
 
+
   // &__filter {
-    position: relative;
-    z-index: 12;
+  position: relative;
+  z-index: 12;
   // }
 }

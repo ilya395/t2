@@ -1,9 +1,4 @@
-mixin diagramContainer(arg)
-  .diagram-container
-    .diagram-container__layer
-      .diagram-container__title
-        h2= arg.title || "-"
-      .diagram-container__content= arg.content
+include ../../particles/mixins/diagram-container.mixin.pug
 main.main.home-region.blocks.active
   section.diagram.d1
     +diagramContainer({title: "Динамика вылета/прилета аэропорта", content: "Динамика вылета/прилета аэропорта"})
