@@ -7,7 +7,12 @@ mixin asideHandler({classColor, title, filterName})
             h1.text_white #{title}
           .panel__snippet-info
             .snippet-info__container
-              include ../home-region/home-region_snippet.pug
+              if filterName==="home-region"
+                include ../home-region/home-region_snippet.pug
+              if filterName==="air-passenger-traffic"
+                include ../home-region/home-region_snippet.pug
+              if filterName==="airport-visitors"
+                include ../airport-visitors/airport-visitors_snippet.pug
           .panel__buttons
             .buttons__manage
               .manage__container
@@ -25,3 +30,7 @@ mixin asideHandler({classColor, title, filterName})
     //- .aside__filter
     if filterName==="home-region"
       include ../home-region/filter.pug
+    if filterName==="air-passenger-traffic"
+      include ../air-passenger-traffic/filter.pug
+    if filterName==="airport-visitors"
+      include ../airport-visitors/filter.pug

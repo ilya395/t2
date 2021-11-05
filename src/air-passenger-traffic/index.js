@@ -1,2 +1,18 @@
+import "../styles/fonts.css";
 import "./style.scss";
-console.log(2)
+
+import { FilterComponent, TogglerComponent  } from "../components";
+
+window.addEventListener("load", () => {
+  console.log(1)
+  const newFilter = new FilterComponent({
+    workContainer: ".filter-container",
+    manageElement: ".open-filter-btn__button",
+  });
+  newFilter.init();
+
+  const toggler = new TogglerComponent ({
+    workContainer: "main.main"
+  });
+  toggler.init();
+});

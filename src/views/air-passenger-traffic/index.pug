@@ -3,4 +3,11 @@ html
   head
     include ../particles/meta.pug
     include ./part/title.pug
-  body
+  body.body
+    .work-area
+      include ../particles/mixins/header.mixin.pug
+      +headerHandler({active: "air-passenger-traffic"})
+      include ../particles/mixins/aside.mixin.pug
+      +asideHandler({classColor: "purple", title: "Авиа пассажиропоток", filterName: "air-passenger-traffic"})
+      .main-wrapper
+        include ./part/main.pug

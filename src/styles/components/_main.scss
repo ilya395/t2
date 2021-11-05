@@ -14,25 +14,31 @@
   display: grid;
   background-color: $white_color;
 
-  .d1 {
+  & .diagram {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  & .d1 {
     grid-area: d1;
   }
-  .d2 {
+  & .d2 {
     grid-area: d2;
   }
-  .d3 {
+  & .d3 {
     grid-area: d3;
   }
-  .d4 {
+  & .d4 {
     grid-area: d4;
+  }
+  & .d5 {
+    grid-area: d5;
+  }
+  & .d6 {
+    grid-area: d6;
   }
 
   &.home-region {
-    & .diagram {
-      opacity: 0;
-      transition: opacity 0.4s ease-in-out;
-    }
-
     &.rows {
       grid-template-areas:
       "d1"
@@ -66,6 +72,92 @@
       grid-template-areas:
       "d1 d2"
       "d3 d4";
+      grid-template-columns: 50% 50%;
+
+      &.active {
+        & .diagram {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &.air-passenger-traffic {
+    &.rows {
+      grid-template-areas:
+      "d1"
+      "d2"
+      "d3";
+
+      grid-auto-rows: 40.2rem;
+
+      & section {
+
+        & .diagram-container {
+          padding-bottom: 1.8rem;
+        }
+
+        &:last-child {
+          & .diagram-container {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &.active {
+        & .diagram {
+          opacity: 1;
+        }
+      }
+    }
+    &.blocks {
+      min-height: 65rem;
+      grid-template-areas:
+      "d1 d2"
+      "d3 d2";
+      grid-template-columns: 50% 50%;
+
+      &.active {
+        & .diagram {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &.airport-visitors {
+    &.rows {
+      grid-template-areas:
+      "d1 d1"
+      "d3 d4"
+      "d2 d2"
+      "d5 d5";
+
+      grid-auto-rows: 40.2rem;
+
+      & section {
+
+        & .diagram-container {
+          padding-bottom: 1.8rem;
+        }
+
+        &:last-child {
+          & .diagram-container {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &.active {
+        & .diagram {
+          opacity: 1;
+        }
+      }
+    }
+    &.blocks {
+      min-height: 65rem;
+      grid-template-areas:
+      "d1 d1 d2 d2"
+      "d3 d4 d5 d5";
+      grid-template-columns: 25% 25% 25% 25%;
 
       &.active {
         & .diagram {

@@ -23,6 +23,41 @@
       background-color: $ping_color;
     }
   }
+  &.purple {
+    background-color: $purple_color;
+
+    & .open-filter-btn__info {
+      color: $purple_color;
+    }
+    & .filter-container {
+      background-color: $purple_color;
+    }
+    & .aside__layer {
+      background-color: $purple_color;
+    }
+  }
+  &.green {
+    background-color: $green_color;
+
+    & .open-filter-btn__info {
+      color: $green_color;
+    }
+    & .filter-container {
+      background-color: $green_color;
+    }
+    & .aside__layer {
+      background-color: $green_color;
+    }
+
+    & .filter-container {
+      &__list {
+        justify-content: flex-start;
+      }
+      &__list-item {
+        box-sizing: content-box;
+      }
+    }
+  }
 
 
   & .panel {
@@ -52,11 +87,12 @@
           padding-left: 2rem;
           padding-right: 2rem;
         }
-        // &__title {
-        //   // flex-basis: 100%;
-        //   // flex-grow: 3;
-        //   // flex-shrink: 0;
-        // }
+        &__title {
+          // flex-basis: 100%;
+          // flex-grow: 3;
+          // flex-shrink: 0;
+          text-align: center;
+        }
         &__wrap {
           display: flex;
           flex-direction: row;

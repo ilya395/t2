@@ -5,7 +5,8 @@ html
     include ./part/title.pug
   body.body
     .work-area
-      include ../particles/header.pug
+      include ../particles/mixins/header.mixin.pug
+      +headerHandler({active: "home-region"})
       include ../particles/mixins/aside.mixin.pug
       +asideHandler({classColor: "ping", title: "Домашний регион", filterName: "home-region"})
       .main-wrapper
