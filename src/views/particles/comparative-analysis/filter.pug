@@ -1,0 +1,30 @@
+include ../mixins/filter-item.mixin.pug
+- var n = 0
+.filter-container
+  .filter-container__list
+    .filter-container__list-item
+      +fulterItem({icon: "date"})
+    while n < 3
+      - ++n
+      .filter-container__list-item
+        +fulterItem({icon: "simple"})
+  .filter-container__list-wrap
+    .filter-container__list-title.large-text.large-text_bold.text_white Группа А:
+    .filter-container__list
+      .filter-container__list-item
+        +fulterItem({icon: "date"})
+      - var n = 0
+      while n < 7
+        - ++n
+        .filter-container__list-item
+          +fulterItem({icon: "simple"})
+  .filter-container__list-wrap
+    .filter-container__list-title.large-text.large-text_bold.text_white Группа Б:
+    .filter-container__list
+      .filter-container__list-item
+        +fulterItem({icon: "date"})
+      - var n = 0
+      while n < 7
+        - ++n
+        .filter-container__list-item
+          +fulterItem({icon: "simple"})

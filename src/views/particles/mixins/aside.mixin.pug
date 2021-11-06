@@ -13,14 +13,17 @@ mixin asideHandler({classColor, title, filterName})
                 include ../home-region/home-region_snippet.pug
               if filterName==="airport-visitors"
                 include ../airport-visitors/airport-visitors_snippet.pug
+              if filterName==="comparative-analysis"
+                include ../comparative-analysis/comparative-analysis_snippet.pug
           .panel__buttons
-            .buttons__manage
-              .manage__container
-                button(data-view="blocks").manage__button.manage-button-with-svg.active
-                  include ../panel_view_blocks.pug
-              .manage__container
-                button(data-view="rows").manage__button.manage-button-with-svg
-                  include ../panel_view_rows.pug
+            if filterName !== "comparative-analysis"
+              .buttons__manage
+                .manage__container
+                  button(data-view="blocks").manage__button.manage-button-with-svg.active
+                    include ../panel_view_blocks.pug
+                .manage__container
+                  button(data-view="rows").manage__button.manage-button-with-svg
+                    include ../panel_view_rows.pug
             .bittons__open-filter-btn
               .open-filter-btn__container
                 button.open-filter-btn__button
@@ -34,3 +37,5 @@ mixin asideHandler({classColor, title, filterName})
       include ../air-passenger-traffic/filter.pug
     if filterName==="airport-visitors"
       include ../airport-visitors/filter.pug
+    if filterName==="comparative-analysis"
+      include ../comparative-analysis/filter.pug

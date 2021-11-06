@@ -58,6 +58,28 @@
       }
     }
   }
+  &.blue {
+    background-color: $blue_color;
+
+    & .open-filter-btn__info {
+      color: $blue_color;
+    }
+    & .filter-container {
+      background-color: $blue_color;
+    }
+    & .aside__layer {
+      background-color: $blue_color;
+    }
+
+    & .filter-container {
+      &__list {
+        justify-content: flex-start;
+      }
+      &__list-item {
+        box-sizing: content-box;
+      }
+    }
+  }
 
 
   & .panel {
@@ -102,13 +124,13 @@
         }
         &__info {
           flex-grow: 2;
-          font-family: "tele2_displayserif-regular", sans-serif;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 2.8rem;
-          line-height: 3.4rem;
+          // font-family: "tele2_displayserif-regular", sans-serif;
+          // font-style: normal;
+          // font-weight: bold;
+          // font-size: 2.8rem;
+          // line-height: 3.4rem;
+          // letter-spacing: 0.01rem;
           text-align: center;
-          letter-spacing: 0.01rem;
         }
         &__snippet-icons {
           flex-grow: 1;

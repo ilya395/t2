@@ -38,6 +38,8 @@ export class FilterComponent {
     const toggleBtn = document.querySelector(this.manageElement);
     if (toggleBtn) {
       toggleBtn.addEventListener("click", this._toggle);
+    } else {
+      console.log("filter can not init")
     }
   }
 }

@@ -13,7 +13,7 @@ $padding: 0.45rem;
   // margin-left: -$desctop_padding_header;
   // margin-right: -$desctop_padding_header;
   // padding-top: 0.9rem + 0rem;
-  padding-bottom: 1.2rem + 0rem;
+  // padding-bottom: 1.2rem + 0rem;
   border-top: 0.2rem solid $white_color;
 
   // opacity: .5;
@@ -29,6 +29,25 @@ $padding: 0.45rem;
     transform: translateY(0rem) scaleY(1); // matrix(1, -1, 1, 1, 0, 0); //  // translateY(0rem);
   }
 
+  // &__list-wrap {
+
+  // }
+  &__list-title {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: auto;
+      border: 0.05rem solid $transparent_white_color;
+    }
+  }
+
   &__list {
     display: flex;
     flex-direction: row;
@@ -36,6 +55,7 @@ $padding: 0.45rem;
     justify-content: space-between;
     margin-left: -$padding;
     margin-right: -$padding;
+    padding-bottom: 1.2rem;
   }
   &__list-item {
     padding-top: 0.9rem;

@@ -4,3 +4,11 @@ html
     include ../particles/meta.pug
     include ./part/title.pug
   body
+    .work-area
+      include ../particles/mixins/header.mixin.pug
+      +headerHandler({active: "comparative-analysis"})
+      include ../particles/mixins/aside.mixin.pug
+      +asideHandler({classColor: "blue", title: "Сравнительный анализ", filterName: "comparative-analysis"})
+      include ./part/tab-panel.pug
+      .main-wrapper
+        include ./part/main.pug

@@ -166,4 +166,29 @@
       }
     }
   }
+  &.comparative-analysis {
+    &.rows {
+      grid-template-areas:
+      "d1";
+
+      // grid-auto-rows: 40.2rem * 2;
+
+      &.active {
+        & .diagram {
+          opacity: 1;
+        }
+      }
+    }
+    &.blocks {
+      min-height: 65rem;
+      grid-template-areas:
+      "d1";
+
+      &.active {
+        & .diagram {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
