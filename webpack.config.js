@@ -25,8 +25,8 @@ const optimization = () => {
     if (isProd) {
         config.minimizer = [
             // new OptimizeCssAssetsWebpackPlugin(), // ранее использовалось для сжатия css
-            // new CssMinimizerPlugin(), // рекомендовано для сжатия css
-            // new TerserWebpackPlugin(), // сжимает в строку js
+            new CssMinimizerPlugin(), // рекомендовано для сжатия css
+            new TerserWebpackPlugin(), // сжимает в строку js
         ]
     }
 
@@ -121,7 +121,7 @@ const plugins = () => {
                 collapseWhitespace: !isProd
             },
             inject: true,
-            chunks: ["home-region"]
+            // chunks: ["home-region"]
         }),
         new HTMLWebpackPlugin({
           filename: 'air-passenger-traffic.html',
@@ -130,7 +130,7 @@ const plugins = () => {
               collapseWhitespace: !isProd
           },
           inject: true,
-          chunks: ["air-passenger-traffic"]
+          // chunks: ["air-passenger-traffic"]
         }),
         new HTMLWebpackPlugin({
           filename: 'airport-visitors.html',
@@ -139,7 +139,7 @@ const plugins = () => {
               collapseWhitespace: !isProd
           },
           inject: true,
-          chunks: ["airport-visitors"]
+          // chunks: ["airport-visitors"]
         }),
         new HTMLWebpackPlugin({
           filename: 'comparative-analysis.html',
@@ -148,7 +148,7 @@ const plugins = () => {
               collapseWhitespace: !isProd
           },
           inject: true,
-          chunks: ["comparative-analysis"]
+          // chunks: ["comparative-analysis"]
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
@@ -172,10 +172,11 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),          // со всех путях удаляю эту папку
     mode: 'development',
     entry: {                                          // точка входа в приложение, откуда начать
-        'home-region': ['@babel/polyfill', './home-region/index.js'],
-        'air-passenger-traffic': ['@babel/polyfill', './air-passenger-traffic/index.js'],
-        'airport-visitors': ['@babel/polyfill', './airport-visitors/index.js'],
-        'comparative-analysis': ['@babel/polyfill', './comparative-analysis/index.js'],
+        // 'home-region': ['@babel/polyfill', './home-region/index.js'],
+        // 'air-passenger-traffic': ['@babel/polyfill', './air-passenger-traffic/index.js'],
+        // 'airport-visitors': ['@babel/polyfill', './airport-visitors/index.js'],
+        // 'comparative-analysis': ['@babel/polyfill', './comparative-analysis/index.js'],
+        main: ['@babel/polyfill', './index.js'],
     },
     output: {                                         // куда складывать результаты работы
         filename: 'assets/js/' + filename('js'),      // итоговый файл, после сборкивсех js файлов
@@ -237,13 +238,13 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(ttf|woff|woff2|eot|svg)$/,
+                test: /\.(ttf|woff|woff2|eot)$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
                             name: '[path][name].[ext]',
-                            outputPath: 'fonts/'
+                            // outputPath: 'fonts/'
                         }
                     }
                 ]

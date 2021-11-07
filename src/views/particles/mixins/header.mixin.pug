@@ -20,21 +20,21 @@ mixin headerHandler({active})
     nav.navigation
       ul.navigation__list
         if  active === "home-region"
-          li: a.large-text.text_grey.active(href="#") Домашний регион
+          li: a.large-text.text_grey.active(href="/home-region") Домашний регион
         else
-          li: a.large-text.text_grey(href="#") Домашний регион
+          li: a.large-text.text_grey(href="/home-region") Домашний регион
         if active === "air-passenger-traffic"
-          li: a.large-text.text_grey.active(href="#") Авиа пассажиропоток
+          li: a.large-text.text_grey.active(href="/air-passenger-traffic") Авиа пассажиропоток
         else
-          li: a.large-text.text_grey(href="#") Авиа пассажиропоток
+          li: a.large-text.text_grey(href="/air-passenger-traffic") Авиа пассажиропоток
         if active === "airport-visitors"
-          li: a.large-text.text_grey.active(href="#") Посетители аэропорта
+          li: a.large-text.text_grey.active(href="/airport-visitors") Посетители аэропорта
         else
-          li: a.large-text.text_grey(href="#") Посетители аэропорта
+          li: a.large-text.text_grey(href="/airport-visitors") Посетители аэропорта
         if active === "comparative-analysis"
-          li: a.large-text.text_grey.active(href="#") Сравнительный анализ
+          li: a.large-text.text_grey.active(href="/comparative-analysis") Сравнительный анализ
         else
-          li: a.large-text.text_grey(href="#") Сравнительный анализ
+          li: a.large-text.text_grey(href="/comparative-analysis") Сравнительный анализ
     .header__buttons
       .header__user-pick
         .user-pick__icon
