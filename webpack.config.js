@@ -160,7 +160,7 @@ const plugins = () => {
           ]
       }),
         new MiniCssExtractPlugin({
-            filename: 'assets/css/' + filename('css'),
+            filename: filename('css'),
         }),
         // new Dotenv()
     ]
@@ -179,7 +179,7 @@ module.exports = {
         main: ['@babel/polyfill', './index.js'],
     },
     output: {                                         // куда складывать результаты работы
-        filename: 'assets/js/' + filename('js'),      // итоговый файл, после сборкивсех js файлов
+        filename: filename('js'),                     // итоговый файл, после сборкивсех js файлов
         path: path.resolve(__dirname, 'dist'),        // отталкиваясь от текущей директории, складывать все в dist
         publicPath: '/',                              // относительная ссылка, которая будет подставляться из браузера
     },

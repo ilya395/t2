@@ -161,6 +161,10 @@ $padding: 0.45rem;
 .qv-collapsed-listbox {
 	border: none; /* 1px solid #fff; */
 	border-radius: 4px;
+
+  &.small {
+    height: 50%;
+  }
 }
 .qv-collapsed-listbox .title-wrapper {
 	background-color: #fff;
@@ -169,6 +173,7 @@ $padding: 0.45rem;
 	background-color: #fff;
 	border: none; /* 1px solid #fff; */
 }
+.qv-collapsed-listbox.small
 
 
 .test {

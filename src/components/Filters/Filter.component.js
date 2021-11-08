@@ -30,16 +30,12 @@ export class FilterComponent {
         });
 
       }
-    } else {
-      console.log(this.inWorking)
     }
   }
   init() {
     const toggleBtn = document.querySelector(this.manageElement);
     if (toggleBtn) {
       toggleBtn.addEventListener("click", this._toggle);
-    } else {
-      console.log("filter can not init")
     }
   }
 }

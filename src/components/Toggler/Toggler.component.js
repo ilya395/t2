@@ -59,7 +59,7 @@ export class TogglerComponent {
 
         this._viewController(target.dataset.view);
       }
-    } console.log("alert")
+    }
   }
   init() {
     document.addEventListener("click", this._clickHandler);
