@@ -7,7 +7,6 @@ $padding: 0.45rem;
   right: 0;
   bottom: auto;
   left: 0;
-  // width: 100vw;
   padding-left: $desctop_padding_header;
   padding-right: $desctop_padding_header;
   // margin-left: -$desctop_padding_header;
@@ -16,7 +15,7 @@ $padding: 0.45rem;
   // padding-bottom: 1.2rem + 0rem;
   border-top: 0.2rem solid $white_color;
 
-  // opacity: .5;
+  opacity: 0;
   z-index: -1;
   transform-origin: 50% 0%;
   transform: translateY(-6rem) scaleY(0); // matrix(1, 0, 1, 0, 0, 0); // ; // translateY(-50rem);
