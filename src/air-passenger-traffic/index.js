@@ -4,7 +4,6 @@ import "./style.scss";
 import { FilterComponent, TogglerComponent  } from "../components";
 
 window.addEventListener("load", () => {
-  console.log(1)
   const newFilter = new FilterComponent({
     workContainer: ".filter-container",
     manageElement: ".open-filter-btn__button",

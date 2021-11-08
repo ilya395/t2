@@ -215,39 +215,9 @@ module.exports = {
                 test: /\.s[ac]ss$/,
                 use: cssLoaders('sass-loader')
             },
-            {
-                test: /\.(png|jpg|jpeg|svg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[ext]',
-                        }
-                    },
-                ]
-            },
-            {
-                test: /\.(pdf|txt|doc|docx)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[ext]',
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.(ttf|woff|woff2|eot)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[ext]',
-                            // outputPath: 'fonts/'
-                        }
-                    }
-                ]
+            { // The file-loader and url-loader have been deprecated and are conflicting with css-loader 6.x. Consider removing the file-loader and url-loader and use the Asset Modules built into Webpack 5.
+              test: /\.(jpe?g|svg|png|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
+              type: 'asset/resource',
             },
             {
                 test: /\.js$/,

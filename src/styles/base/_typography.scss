@@ -1,4 +1,5 @@
 @import "../variables/variables";
+// @import url("https://tourism.tele2.ru/fonts/Tele2DisplaySerif-Regular.otf");
 
 // @font-face {
 //   font-family: "tele2_displayserif-regular";
@@ -61,6 +62,7 @@ h1 {
 }
 h2 {
   @extend .simple-title;
+  font-family: "tele2_displayserif-regular";
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
@@ -106,8 +108,8 @@ h3 {
   font-family: "tele2_displayserif-regular", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 2.8rem;
-  line-height: 3.4rem;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
   letter-spacing: 0.01rem;
 }
 

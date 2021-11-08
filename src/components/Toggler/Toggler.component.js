@@ -49,7 +49,6 @@ export class TogglerComponent {
     if (target.dataset.view && !this.inWorking) {
       if (!target.classList.contains("active")) {
         const allManageButtons = document.querySelectorAll("[data-view]");
-        console.log(allManageButtons)
         allManageButtons.forEach(item => {
           if (item.dataset.view === target.dataset.view) {
             item.classList.add("active");
