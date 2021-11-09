@@ -191,4 +191,13 @@
       }
     }
   }
+
+  .two-diagrams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .one-of-two-diagrams {
+    height: 100%;
+  }
 }

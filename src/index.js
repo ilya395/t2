@@ -1,4 +1,4 @@
-import "./styles/fonts.css";
+// import "./styles/fonts.css";
 import "./style.scss";
 
 import { FilterComponent, TogglerComponent  } from "./components";

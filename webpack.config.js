@@ -33,7 +33,7 @@ const optimization = () => {
     return config
 }
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const filename = ext => isDev ? `[name].${ext}` : `[name].${ext}`; // `[name].[hash].${ext}`
 
 const cssLoaders  = (extra) => {
     const loaders = [
@@ -158,11 +158,16 @@ const plugins = () => {
               to: path.resolve(__dirname, './dist/'),
             },
           ]
-      }),
+        }),
         new MiniCssExtractPlugin({
             filename: filename('css'),
         }),
         // new Dotenv()
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+          }
+        })
     ]
 
     return base
@@ -218,6 +223,9 @@ module.exports = {
             { // The file-loader and url-loader have been deprecated and are conflicting with css-loader 6.x. Consider removing the file-loader and url-loader and use the Asset Modules built into Webpack 5.
               test: /\.(jpe?g|svg|png|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
               type: 'asset/resource',
+              generator: {
+                filename: './[name][ext]', // './fonts/[name][ext]',
+              },
             },
             {
                 test: /\.js$/,

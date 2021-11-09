@@ -1,4 +1,5 @@
 @import "../variables/variables";
+@import "../base/typography";
 
 .aside {
 
@@ -159,6 +160,7 @@
           flex-grow: 1;
         }
         &__info {
+          height: 100%;
           flex-grow: 2;
           // font-family: "tele2_displayserif-regular", sans-serif;
           // font-style: normal;
@@ -167,6 +169,10 @@
           // line-height: 3.4rem;
           // letter-spacing: 0.01rem;
           text-align: center;
+          & .sn-kpi-ellips-text span {
+            @extend .text_white;
+            @extend .very-big-text;
+          }
         }
         &__snippet-icons {
           flex-grow: 1;
