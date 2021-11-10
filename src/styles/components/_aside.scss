@@ -144,6 +144,7 @@
           // max-width: auto;
           padding-left: 1.5rem;
           padding-right: 1.5rem;
+          min-width: 15rem;
         }
         &__title {
           // flex-basis: 100%;
@@ -158,6 +159,7 @@
           justify-content: space-between;
           align-items: center;
           flex-grow: 1;
+          min-height: 3rem;;
         }
         &__info {
           height: 100%;
