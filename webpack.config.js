@@ -90,7 +90,8 @@ const babelOptions = (preset) => {
           "@babel/preset-env"
         ],
         plugins: [
-            '@babel/plugin-proposal-class-properties'
+            '@babel/plugin-proposal-class-properties',
+            '@babel/plugin-syntax-dynamic-import'
         ]
     }
 
@@ -122,6 +123,7 @@ const plugins = () => {
             },
             inject: true,
             // chunks: ["home-region"]
+            production: (process.env.NODE_ENV === 'production'),
         }),
         new HTMLWebpackPlugin({
           filename: 'air-passenger-traffic.html',
@@ -244,7 +246,8 @@ module.exports = {
               loader: 'pug-loader',
               options: {
                   pretty: true,
-              }
+                  self: true,
+              },
           }
         ]
     },

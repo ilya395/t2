@@ -1,9 +1,19 @@
+import { CHANGE_VIEW } from "../../constants";
+
 export class TogglerComponent {
   constructor(object) {
     this.workContainer = object.workContainer;
     this.inWorking = false;
     this._clickHandler = this._clickHandler.bind(this);
     this._viewController = this._viewController.bind(this);
+  }
+  _eventMaker(object) {
+    const { node, data } = object;
+    const event = new Event(CHANGE_VIEW, {
+      bubbles: true,
+    });
+    event.data = data;
+    node.dispatchEvent(event);
   }
   _viewController(view) {
     const container = document.querySelector(this.workContainer);
@@ -58,6 +68,13 @@ export class TogglerComponent {
         });
 
         this._viewController(target.dataset.view);
+
+        this._eventMaker({
+          node: target,
+          data: {
+            view: target.dataset.view
+          }
+        });
       }
     }
   }

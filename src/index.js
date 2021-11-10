@@ -1,4 +1,10 @@
 // import "./styles/fonts.css";
+(async () => {
+  if (process.env.NODE_ENV !== "production") {
+    const s = await import("./styles/fonts.css");
+    s();
+  }
+})
 import "./style.scss";
 
 import { FilterComponent, TogglerComponent  } from "./components";
