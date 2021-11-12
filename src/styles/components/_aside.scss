@@ -144,7 +144,7 @@
           // max-width: auto;
           padding-left: 1.5rem;
           padding-right: 1.5rem;
-          min-width: 15rem;
+          min-width: 17rem;
         }
         &__title {
           // flex-basis: 100%;
@@ -175,9 +175,6 @@
             @extend .text_white;
             @extend .very-big-text;
           }
-        }
-        &__snippet-icons {
-          flex-grow: 1;
         }
 
         &__snippet-icon {

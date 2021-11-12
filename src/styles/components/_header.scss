@@ -1,4 +1,5 @@
 @import "../variables/variables";
+@import "../base/typography";
 
 .header {
   width: 100%; // 100vw;
@@ -50,6 +51,16 @@
 
     &__name {
       margin-left: 0.7rem;
+      width: 12rem;
+      height: 2.3rem;
+
+      & .qv-media-tool-html {
+        @extend .text_white;
+        @extend .main-text;
+        align-items: center;
+        font-size: 1.2rem !important;
+        line-height: 1.6rem !important;
+      }
     }
   }
 
