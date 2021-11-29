@@ -3,8 +3,10 @@ html
   head
     include ../particles/meta.pug
     include ./part/title.pug
+    include ../particles/google-tag-manager.pug
     include ../particles/style.pug
   body.body
+    include ../particles/google-tag-manager-noscript.pug
     .work-area
       include ../particles/mixins/header.mixin.pug
       +headerHandler({active: "air-passenger-traffic"})
