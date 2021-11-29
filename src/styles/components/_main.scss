@@ -4,6 +4,7 @@
   &-wrapper {
     padding-left: $desctop_padding_header;
     padding-right: $desctop_padding_header;
+    height: 100%;
   }
 
   padding-bottom: 1rem;
@@ -69,6 +70,7 @@
     }
     &.blocks {
       min-height: 65rem;
+      height: 100%;
       grid-template-areas:
       "d1 d2"
       "d3 d4";
