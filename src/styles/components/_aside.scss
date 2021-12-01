@@ -145,6 +145,10 @@
           padding-left: 1.5rem;
           padding-right: 1.5rem;
           min-width: 17rem;
+
+          @media screen and (min-width: 1400px) {
+            min-width: 18rem;
+          }
         }
         &__title {
           // flex-basis: 100%;
@@ -217,6 +221,10 @@
           // padding: 0.4rem;
           background-color: transparent;
         }
+      }
+
+      & .bittons__open-filter-btn {
+        display: flex;
       }
 
       & .open-filter-btn {

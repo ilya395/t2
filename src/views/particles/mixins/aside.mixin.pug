@@ -26,7 +26,12 @@ mixin asideHandler({classColor, title, filterName})
                     include ../panel_view_rows.pug
             .bittons__open-filter-btn
               .open-filter-btn__container
-                button.open-filter-btn__button
+                button.open-filter-btn__button#clear-filter
+                  include ../open-filter-btn.pug
+                  .open-filter-btn__layer
+                    .open-filter-btn__info.small-text X
+              .open-filter-btn__container
+                button.open-filter-btn__button#open-filter
                   include ../open-filter-btn.pug
                   .open-filter-btn__layer
                     .open-filter-btn__info.small-text 7

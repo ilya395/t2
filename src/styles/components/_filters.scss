@@ -51,7 +51,7 @@ $padding: 0.45rem;
     justify-content: space-between;
     margin-left: -$padding;
     margin-right: -$padding;
-    padding-bottom: 1.2rem;
+    // padding-bottom: 1.2rem;
   }
   &__list-item {
     padding-top: 0.9rem;
@@ -169,6 +169,10 @@ $padding: 0.45rem;
 }
 .qv-collapsed-listbox .title-wrapper {
 	background-color: #fff;
+
+  & .title {
+    color: $black_color !important;
+  }
 }
 .qv-collapsed-listbox .qv-state-count-bar {
 	background-color: #fff;

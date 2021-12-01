@@ -113,6 +113,7 @@
     }
     &.blocks {
       min-height: 65rem;
+      height: 100%;
       grid-template-areas:
       "d1 d2"
       "d3 d2";
@@ -156,6 +157,7 @@
     }
     &.blocks {
       min-height: 65rem;
+      height: 100%;
       grid-template-areas:
       "d1 d1 d2 d2"
       "d3 d4 d5 d5";
@@ -183,6 +185,7 @@
     }
     &.blocks {
       min-height: 65rem;
+      height: 100%;
       grid-template-areas:
       "d1";
 

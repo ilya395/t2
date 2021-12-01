@@ -1,6 +1,13 @@
-mixin diagramContainer(arg)
+mixin diagramContainer({title = "-", content, label = false, otherLabel = false})
   .diagram-container
     .diagram-container__layer
       .diagram-container__title
-        h2= arg.title || "-"
-      .diagram-container__content= arg.content
+        h2= title
+      .diagram-container__content
+        .diagram-container__inner-wrap= content
+        if label
+          .diagram-container__sub-title
+            .sub-title__label.main-text.text_grey= label
+        if otherLabel
+          .diagram-container__sub-title.diagram-container__sub-title_other-label
+            .sub-title__label.sub-title__other-label.main-text.text_grey= otherLabel

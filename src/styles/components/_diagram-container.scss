@@ -29,9 +29,39 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 
     & .qv-object {
       border: none;
+    }
+  }
+
+  &__inner-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__sub-title {
+    position: absolute;
+    z-index: 12;
+    top: 1rem;
+    right: auto;
+    bottom: auto;
+    left: 1rem;
+    pointer-events: none;
+
+    &_other-label {
+      left: 50%;
+    }
+  }
+
+  & .sub-title {
+    &__label {
+      display: inline-block;
     }
   }
 }

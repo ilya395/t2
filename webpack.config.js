@@ -226,7 +226,7 @@ module.exports = {
               test: /\.(jpe?g|svg|png|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
               type: 'asset/resource',
               generator: {
-                filename: './[name][ext]', // './fonts/[name][ext]',
+                filename: './fonts/[name][ext]', // импортит мудацкие шрифты куда нужно, но с абсолютными путями
               },
             },
             {
