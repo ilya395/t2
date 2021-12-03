@@ -1,13 +1,15 @@
-mixin diagramContainer({title = "-", content, label = false, otherLabel = false})
+mixin diagramContainer({title = "-", content, label = false, otherLabel = false, legend = false})
   .diagram-container
     .diagram-container__layer
       .diagram-container__title
         h2= title
       .diagram-container__content
-        .diagram-container__inner-wrap= content
+        .diagram-container__inner-wrap.diagram-container__inner-wrap_with-legend= content
         if label
           .diagram-container__sub-title
-            .sub-title__label.main-text.text_grey= label
+            .sub-title__label.main-text.text_grid= label
         if otherLabel
           .diagram-container__sub-title.diagram-container__sub-title_other-label
-            .sub-title__label.sub-title__other-label.main-text.text_grey= otherLabel
+            .sub-title__label.sub-title__other-label.main-text.text_grid= otherLabel
+        if legend
+          .diagram-container__legend-block 111

@@ -26,6 +26,8 @@
     vertical-align: middle;
     flex-grow: 1;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -43,12 +45,25 @@
     width: 100%;
     height: 100%;
     position: relative;
+
+    &_with-legend {
+      height: 95%;
+    }
+  }
+
+  &__legend-block {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black_color;
   }
 
   &__sub-title {
     position: absolute;
-    z-index: 12;
-    top: 1rem;
+    z-index: 11;
+    top: 0.34rem;
     right: auto;
     bottom: auto;
     left: 1rem;
@@ -63,5 +78,91 @@
     &__label {
       display: inline-block;
     }
+  }
+}
+
+.legend-block {
+
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  &:first-child {
+    padding-left: 1rem;
+  }
+  &:last-child {
+    padding-right: 0rem;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      z-index: 9;
+      content: "";
+      top: 50%;
+      bottom: auto;
+      left: .2rem;
+      right: .2rem;
+      border: 1px solid $ping_color;
+      transform: translateY(1px);
+      background-color: $ping_color;
+    }
+    &:before {
+      position: absolute;
+      z-index: 9;
+      content: "";
+      width: .6rem;
+      height: .6rem;
+      top: 50%;
+      bottom: auto;
+      left: 50%;
+      right: 0;
+      border: 1px solid $ping_color;
+      border-radius: 50%;
+      background-color: $ping_color;
+      transform: translateY(-1px) translateX(-3px);
+    }
+
+
+  }
+  &.second {
+    .legend-block__icon {
+      &:after, &:before {
+        border: 1px solid $diagram_color_11;
+        background-color: $diagram_color_11;
+      }
+    }
+
+  }
+
+  &__description {
+    min-width: 13rem;
+    min-height: 2rem;
+
+    & .qv-object-title-text {
+      color: $grid_grey;
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }

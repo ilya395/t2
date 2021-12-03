@@ -130,6 +130,10 @@ button {
     }
   }
 
+  &_grid {
+    color: $grid_grey;
+  }
+
   &_white {
     color: $white_color;
   }

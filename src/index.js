@@ -7,7 +7,8 @@
 // })();
 import "./style.scss";
 
-import { FilterComponent, TogglerComponent  } from "./components";
+import { ClearFilter, FilterComponent, TogglerComponent  } from "./components";
+
 
 window.addEventListener("load", () => {
   const newFilter = new FilterComponent({
@@ -20,4 +21,9 @@ window.addEventListener("load", () => {
     workContainer: "main.main"
   });
   toggler.init();
+
+  const clearFilterButton = new ClearFilter({
+    workContainer: "#clear-filter"
+  });
+  clearFilterButton.init();
 });

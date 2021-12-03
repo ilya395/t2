@@ -3,6 +3,16 @@ main.main.comparative-analysis.blocks.active
     .diagram-container
       .diagram-container__layer
         .diagram-container__content
-          .diagram-container__inner-wrap= "Some Content"
-            .diagram-container__sub-title
-              .sub-title__label.large-text.text_grey= "По признаку"
+          .diagram-container__inner-wrap.diagram-container__inner-wrap_with-legend= "Some Content"
+          .diagram-container__legend-block
+            .legend-block__wrap
+              .legend-block
+                .legend-block__content
+                  .legend-block__icon
+                  .legend-block__description.large-text.text_grey Какой-то параметр группы А
+              .legend-block.second
+                .legend-block__content
+                  .legend-block__icon
+                  .legend-block__description.large-text.text_grey
+          .diagram-container__sub-title
+            .sub-title__label.large-text.text_grey= "По признаку"

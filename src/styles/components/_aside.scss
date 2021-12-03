@@ -116,6 +116,14 @@
     }
   }
 
+  &__info-preview {
+    padding-top: 1.4rem;
+
+    & .info-preview {
+      height: 3rem;
+      transition: height .3s linear;
+    }
+  }
 
   & .panel {
     display: flex;
