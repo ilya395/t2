@@ -30,6 +30,8 @@ mixin asideHandler({classColor, title, filterName})
                   include ../open-filter-btn.pug
                   .open-filter-btn__layer
                     .open-filter-btn__info.small-text X
+                  if filterName==="comparative-analysis"
+                    .open-filter-btn__content
               .open-filter-btn__container
                 button.open-filter-btn__button#open-filter
                   include ../open-filter-btn.pug
