@@ -99,3 +99,13 @@ button.manage-button-with-svg {
 .qv-object-text-image .qv-media-tool-html {
   color: $white_color;
 }
+
+.qs-container .qsc-item-wrapper {
+  border: none !important;
+}
+.qs-container .qsc-item-wrapper .qsc-item {
+  border: none !important;
+}
+.qsc-item-wrapper .ng-scope.qv-filterpane-collapsed {
+  padding-top: 2px !important;
+}

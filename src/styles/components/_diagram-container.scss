@@ -72,6 +72,11 @@
     &_other-label {
       left: 50%;
     }
+    &_specific {
+      top: 0.43rem;
+      left: 50%;
+      transform: translateX(-100px);
+    }
   }
 
   & .sub-title {

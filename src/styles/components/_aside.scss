@@ -118,10 +118,22 @@
 
   &__info-preview {
     padding-top: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     & .info-preview {
+      flex-grow: 3;
       height: 3rem;
       transition: height .3s linear;
+      width: 100%;
+      flex-basis: 100%;
+
+      &_group {
+        flex-grow: 1;
+        width: 50%;
+        flex-basis: 50%;
+      }
     }
   }
 
