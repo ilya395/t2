@@ -169,12 +169,27 @@
           @media screen and (min-width: 1400px) {
             min-width: 18rem;
           }
+
+          &_analis {
+            min-width: 24rem;
+            & .media-tool-scrollbar {
+              border: none;
+            }
+            & .qv-media-tool-html {
+              padding: 0;
+            }
+          }
         }
         &__title {
           // flex-basis: 100%;
           flex-grow: 1;
           // flex-shrink: 0;
           text-align: center;
+
+          & .qv-object-text-image .qv-media-tool-html {
+            @extend .large-text;
+            @extend .text_white;
+          }
         }
         &__wrap {
           display: flex;
@@ -204,6 +219,7 @@
         &__snippet-icon {
           flex-grow: 0;
         }
+
       }
       & .snippet-icon__container {
         width: 3.2rem;
@@ -279,6 +295,35 @@
           bottom: 0;
           left: 0;
           z-index: 10;
+          overflow: hidden;
+
+          & .lui-button {
+            width: 100%;
+            height: 100%;
+            min-width: 0;
+            overflow: hidden;
+            padding: 0;
+
+            & span {
+              display: none;
+            }
+
+            &.lui-button--gradient {
+              color: transparent;
+              background-color: transparent;
+              background-image: none;
+              border-color: transparent;
+              box-shadow: none;
+
+              &:active {
+                color: transparent;
+                background-color: transparent;
+                background-image: none;
+                border-color: transparent;
+                box-shadow: none;
+              }
+            }
+          }
         }
       }
 
