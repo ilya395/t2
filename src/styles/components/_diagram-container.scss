@@ -47,17 +47,24 @@
     position: relative;
 
     &_with-legend {
+      height: 85%;
+    }
+    &_with-short-legend {
       height: 90%;
     }
   }
 
   &__legend-block {
     width: 100%;
-    height: 10%;
+    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $black_color;
+
+    &_with-short-legend {
+      height: 10%;
+    }
   }
 
   &__sub-title {
